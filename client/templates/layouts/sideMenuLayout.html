@@ -1,0 +1,96 @@
+<template name="sideMenuLayout">
+  {{#ionBody}}
+
+    {{#ionSideMenuContainer}}
+
+      {{#ionSideMenus}}
+
+        {{#ionSideMenu}}
+          <div class="bar bar-header bar-dark">
+            <h1 class="title">Menu</h1>
+          </div>
+          <div class="content has-header">
+            <div class="list">
+              <a href="{{pathFor 'actionSheet'}}" class="item item-icon-right" data-ion-menu-close>
+                actionSheet {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'backdrop'}}" class="item item-icon-right" data-ion-menu-close>
+                backdrop {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'forms'}}" class="item item-icon-right" data-ion-menu-close>
+                forms {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'headersFooters'}}" class="item item-icon-right" data-ion-menu-close>
+                headersFooters {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'lists'}}" class="item item-icon-right" data-ion-menu-close>
+                lists {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'loading'}}" class="item item-icon-right" data-ion-menu-close>
+                Loading {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'modal'}}" class="item item-icon-right" data-ion-menu-close>
+                modal {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'navigation'}}" class="item item-icon-right" data-ion-menu-close>
+                navigation {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'popover'}}" class="item item-icon-right" data-ion-menu-close>
+                popover {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+
+              <a href="{{pathFor 'popup'}}" class="item item-icon-right" data-ion-menu-close>
+                popup {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'sideMenu'}}" class="item item-icon-right" data-ion-menu-close>
+                sideMenu {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'slideBox'}}" class="item item-icon-right" data-ion-menu-close>
+                slideBox {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'tabs.one'}}" class="item item-icon-right" data-ion-menu-close>
+                tabs.one {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <a href="{{pathFor 'userAccounts'}}" class="item item-icon-right" data-ion-menu-close>
+                userAccounts {{> ionIcon icon="ios-arrow-right"}}
+              </a>
+              <!-- {{#ionList}}
+                {{#ionItem path="actionSheet" class="item item-icon-right"}}
+                  {{> ionIcon icon="ios-checkmark" class="positive"}}
+                  Action Sheet
+                  {{> ionIcon icon="ios-arrow-right"}}
+                {{/ionItem}}
+              {{/ionList}} -->
+            </div>
+          </div>
+        {{/ionSideMenu}}
+
+        {{#ionSideMenu side="right"}}
+          <div class="bar bar-header bar-dark">
+            <h1 class="title">Right Menu</h1>
+          </div>
+          <div class="content has-header">
+            <div class="list">
+              <div class="item item-icon-left" data-ion-menu-close>
+                {{> ionIcon icon="ios-arrow-left"}} Close Me
+              </div>
+            </div>
+          </div>
+        {{/ionSideMenu}}
+
+      {{/ionSideMenus}}
+
+      {{#ionSideMenuContent}}
+
+        {{> ionNavBar class="bar-positive"}}
+
+        {{#ionNavView}}
+          {{> yield}}
+        {{/ionNavView}}
+
+      {{/ionSideMenuContent}}
+
+    {{/ionSideMenuContainer}}
+
+  {{/ionBody}}
+</template>

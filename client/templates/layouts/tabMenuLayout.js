@@ -1,8 +1,8 @@
-Template.appLayout.rendered = function () {
+Template.tabMenuLayout.rendered = function () {
   Session.set('currentTab', 'trending');
 };
 
-Template.appLayout.events({
+Template.tabMenuLayout.events({
   'click [data-action=share-product]': function (event, template) {
     IonActionSheet.show({
       titleText: 'Share Product',

@@ -9,17 +9,8 @@ Meteor.startup(function() {
       profile: {
         name: 'timh'
       },
-      // services: {
-      //   'meteor-developer': {
-      //     id: 'jqNH8H4imjSeXissFvFa6LXpvpcDbX8Fey',
-      //     username: 'timhannifan',
-      //     emails: [{
-      //       address: 'hannifan@gmail.com',
-      //       verified: false,
-      //       primary: true
-      //     }]
-      //   }
-      // }
+      services: {
+      }
     }
   ];
 
@@ -93,6 +84,16 @@ Meteor.startup(function() {
   }
 
   var author = Meteor.users.find().fetch()[0];
+
+
+  if (Posts.find({}).count() === 0) {
+    Posts.insert({
+      title: Fake.sentence(),
+      body: Fake.paragraph(),
+      published: Fake.fromArray([true, false])
+    });
+  }
+
   if (Products.find({}).count() === 0) {
     _(products).each(function (product) {
       Products.insert({
