@@ -5,17 +5,29 @@
 
 meteor-platform
 service-configuration
+
+
 accounts-meteor-developer
+accounts-base
+accounts-password
+useraccounts:ionic
+alanning:roles
+
 momentjs:moment
 iron:router@1.0.0
 zimme:iron-router-active
-anti:fake
+
+
 reywood:publish-composite
 matb33:collection-hooks
 aldeed:collection2
-aldeed:autoform
-mrt:underscore-string-latest
 dburles:collection-helpers
+anti:fake
+aldeed:autoform
+
+underscore
+mrt:underscore-string-latest
+
 bengott:avatar
 
 fourseven:scss
